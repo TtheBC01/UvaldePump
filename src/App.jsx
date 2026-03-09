@@ -99,7 +99,7 @@ function Header() {
       <div className="container nav-inner">
         <a href="#" className="header-logo-link" aria-label="Uvalde Pump home">
           <img
-            src="/uvalde-pump-logo.png"
+            src={`${import.meta.env.BASE_URL}uvalde-pump-logo.png`}
             alt="Uvalde Pump logo"
             className="header-logo-image"
           />
@@ -202,7 +202,7 @@ function Footer() {
               <Logo />
             </div>
             <p>
-              Serving Uvalde, Real, and Kinney Counties since 1985. <br />
+              Serving Uvalde, Real, and Kinney Counties since 2020. <br />
               Licensed &amp; Insured.
             </p>
           </div>
