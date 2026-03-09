@@ -84,8 +84,16 @@ const services = [
 
 function Logo() {
   return (
-    <a href="#" className="logo-lockup" aria-label="Uvalde Pump home">
-      <div className="logo-mark" />
+    <a
+      href={import.meta.env.BASE_URL}
+      className="header-logo-link"
+      aria-label="Uvalde Pump home"
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}uvalde-pump-logo.png`}
+        alt="Uvalde Pump logo"
+        className="header-logo-image"
+      />
       <div className="logo-text">
         Uvalde <span>Pump</span>
       </div>
@@ -97,16 +105,7 @@ function Header() {
   return (
     <header>
       <div className="container nav-inner">
-        <a href="#" className="header-logo-link" aria-label="Uvalde Pump home">
-          <img
-            src={`${import.meta.env.BASE_URL}uvalde-pump-logo.png`}
-            alt="Uvalde Pump logo"
-            className="header-logo-image"
-          />
-          <div className="logo-text">
-            Uvalde <span>Pump</span>
-          </div>
-        </a>
+        <Logo />
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#services" className="nav-link">
             Services
@@ -131,12 +130,13 @@ function HeroSection() {
     <section className="hero">
       <div className="container">
         <div className="hero-content">
-          <span className="hero-subtitle">Est. Texas 1985</span>
-          <h1>Reliable Water Solutions for the Texas Hill Country</h1>
+          <span className="hero-subtitle">Est. Texas 2020</span>
+          <h1>Reliable Water Solutions for South Texas</h1>
           <div className="flourish" />
           <p>
             Expert installation, repair, and parts for agricultural, residential, and
-            commercial water systems. We keep the water flowing when you need it most.
+            commercial water systems across South Texas. We keep the water flowing when
+            you need it most.
           </p>
           <div className="hero-actions">
             <a href="tel:8302781400" className="btn">
@@ -159,7 +159,7 @@ function ServicesSection() {
         <h2>Our Capabilities</h2>
         <p>
           From deep well submersibles to solar-powered surface pumps, our technicians
-          are certified to handle the rigorous demands of the Texas climate.
+          are certified to handle the rigorous demands of South Texas conditions.
         </p>
         <div className="services-grid">
           {services.map((service) => (
@@ -170,6 +170,37 @@ function ServicesSection() {
             </article>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function PartsSection() {
+  return (
+    <section id="parts" className="section">
+      <div className="container">
+        <h2>Pump Parts in Stock</h2>
+        <p>
+          We keep South Texas customers running with inventory for pumps, motors,
+          pressure switches, gaskets, and control boxes from trusted brands.
+        </p>
+        <a href="tel:8302781400" className="btn btn-outline">
+          Ask About Parts Availability
+        </a>
+      </div>
+    </section>
+  );
+}
+
+function AboutSection() {
+  return (
+    <section id="about" className="section">
+      <div className="container">
+        <h2>About Uvalde Pump</h2>
+        <p>
+          Since 2020, Uvalde Pump has helped ranches, homeowners, and businesses keep
+          dependable water service throughout South Texas.
+        </p>
       </div>
     </section>
   );
@@ -202,17 +233,17 @@ function Footer() {
               <Logo />
             </div>
             <p>
-              Serving Uvalde, Real, and Kinney Counties since 2020. <br />
+              Serving South Texas since 2020. <br />
               Licensed &amp; Insured.
             </p>
           </div>
           <div className="footer-info footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              2400 Main Street
+            <h3>Contact Us</h3>
+            <address className="contact-address">
+              3839 E Main St
               <br />
               Uvalde, TX 78801
-            </p>
+            </address>
             <a href="tel:8302781400" className="contact-large">
               830-278-1400
             </a>
@@ -230,6 +261,8 @@ export default function App() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <PartsSection />
+        <AboutSection />
         <CtaSection />
       </main>
       <Footer />
