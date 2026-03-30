@@ -217,8 +217,36 @@ header {
   background-size: 100% 100%;
 }
 
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 44%);
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
 .hero-content {
   max-width: 800px;
+}
+
+.hero-image-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  /* Align image top with main hero headline, not the subtitle chip. */
+  margin-top: clamp(30px, 2.8vw, 46px);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  box-shadow:
+    0 6px 0 rgba(0, 40, 104, 0.2),
+    0 18px 36px rgba(0, 0, 0, 0.24),
+    -10px 14px 24px rgba(227, 24, 55, 0.16);
 }
 
 .hero-subtitle {
@@ -380,5 +408,19 @@ footer {
 
   .hero {
     padding: var(--spacing-lg) 0;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .hero-image-wrap {
+    order: -1;
+    margin-top: 0;
+  }
+
+  .hero-image {
+    max-height: none;
   }
 }

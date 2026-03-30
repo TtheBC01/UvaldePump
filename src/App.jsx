@@ -129,22 +129,31 @@ function HeroSection() {
   return (
     <section className="hero">
       <div className="container">
-        <div className="hero-content">
-          <span className="hero-subtitle">Est. Texas 2020</span>
-          <h1>Reliable Water Solutions for South Texas</h1>
-          <div className="flourish" />
-          <p>
-            Expert installation, repair, and parts for agricultural, residential, and
-            commercial water systems across South Texas. We keep the water flowing when
-            you need it most.
-          </p>
-          <div className="hero-actions">
-            <a href="tel:8302781400" className="btn">
-              Request Service
-            </a>
-            <a href="#services" className="btn btn-outline">
-              View Services
-            </a>
+        <div className="hero-layout">
+          <div className="hero-content">
+            <span className="hero-subtitle">Est. Texas 1960</span>
+            <h1>Reliable Water Solutions for South Texas</h1>
+            <div className="flourish" />
+            <p>
+              Expert installation, repair, and parts for livestock, residential, and
+              commercial water systems across South Texas. We keep the water flowing when
+              you need it most.
+            </p>
+            <div className="hero-actions">
+              <a href="tel:8302781400" className="btn">
+                Request Service
+              </a>
+              <a href="#services" className="btn btn-outline">
+                View Services
+              </a>
+            </div>
+          </div>
+          <div className="hero-image-wrap">
+            <img
+              src={`${import.meta.env.BASE_URL}hero.jpg`}
+              alt="Water pump equipment in South Texas field"
+              className="hero-image"
+            />
           </div>
         </div>
       </div>
@@ -233,7 +242,7 @@ function Footer() {
               <Logo />
             </div>
             <p>
-              Serving South Texas since 2020. <br />
+              Serving South Texas since 1960. <br />
               Licensed &amp; Insured.
             </p>
           </div>
