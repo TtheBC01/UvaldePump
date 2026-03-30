@@ -253,6 +253,9 @@ function Footer() {
               <br />
               Uvalde, TX 78801
             </address>
+            <a href="mailto:sales@uvaldepump.com" className="contact-email">
+              sales@uvaldepump.com
+            </a>
             <a href="tel:8302781400" className="contact-large">
               830-278-1400
             </a>
