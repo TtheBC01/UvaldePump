@@ -221,12 +221,17 @@ function CtaSection() {
       <div className="container">
         <h2>Need a Part? Need a Pro?</h2>
         <p>
-          Don&apos;t wait until the tank is dry. Call the local experts at Uvalde Pump
+          Don&apos;t wait until the tank is dry. Call or email the local experts at Uvalde Pump
           today.
         </p>
-        <a href="tel:8302781400" className="btn">
-          Call 830-278-1400
-        </a>
+        <div className="cta-actions">
+          <a href="tel:8302781400" className="btn">
+            Call 830-278-1400
+          </a>
+          <a href="mailto:sales@uvaldepump.com" className="btn cta-email-btn">
+            Email sales@uvaldepump.com
+          </a>
+        </div>
       </div>
     </section>
   );

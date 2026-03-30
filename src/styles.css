@@ -329,6 +329,19 @@ header {
   margin: 0 auto var(--spacing-md) auto;
 }
 
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.cta-actions .btn {
+  width: min(100%, 360px);
+  text-align: center;
+}
+
 .cta-banner .btn {
   color: var(--color-texas-red);
   background: var(--color-white);
@@ -336,6 +349,16 @@ header {
 
 .cta-banner .btn:hover {
   background-color: var(--color-texas-red);
+  color: var(--color-white);
+}
+
+.cta-banner .cta-email-btn {
+  background: var(--color-texas-red);
+  color: var(--color-white);
+}
+
+.cta-banner .cta-email-btn:hover {
+  background: var(--color-texas-navy);
   color: var(--color-white);
 }
 
