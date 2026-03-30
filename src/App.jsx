@@ -207,7 +207,7 @@ function AboutSection() {
       <div className="container">
         <h2>About Uvalde Pump</h2>
         <p>
-          Since 2020, Uvalde Pump has helped ranches, homeowners, and businesses keep
+          Since 1960, Uvalde Pump has helped ranches, homeowners, and businesses keep
           dependable water service throughout South Texas.
         </p>
       </div>
